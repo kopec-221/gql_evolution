@@ -81,3 +81,27 @@ GraphTypeDefinitions/
 ```bash
 python .CoderDefinitions/main.py
 ```
+
+
+
+
+
+
+
+
+##  Den 1: Databázová vrstva a modely (Activities)
+
+> **Cíl:** Vytvořit základní modely pro doménu aktivit, napojit je na databázi a zajistit automatické plnění testovacími daty.
+
+---
+
+### 🏗️ Vytvoření tabulek a modelů
+* **Definice struktur:** Vytvořeny SQLAlchemy modely `ActivityModel` a `ActivityTypeModel` reprezentující příslušné entity.
+* **Nastavení atributů:** Přidány cizí klíče (`UUIDFKey`) a výchozí hodnoty (`default=None`) pro bezpečný zápis do databáze.
+* **Registrace:** Nová doména úspěšně zaregistrována a vystavena přes hlavní `src/DBDefinitions/__init__.py`.
+
+---
+
+### 🐘 Testování a ověření
+* Aplikace úspěšně napojena na **PostgreSQL** databázi.
+* Pomocí nástroje **pgAdmin** bylo vizuálně ověřeno korektní vytvoření tabulek (`activities`, `activitytypes`) a úspěšný import inicializačních dat ze souboru.
